@@ -1,5 +1,7 @@
 package fixacao118.entities;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
@@ -34,8 +36,11 @@ public class Client {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
+	public void setBirthDate(String birthDate) throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		this.birthDate = sdf.parse(birthDate);
 	}
 	
 	
