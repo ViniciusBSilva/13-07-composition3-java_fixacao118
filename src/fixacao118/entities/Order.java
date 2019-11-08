@@ -14,23 +14,9 @@ public class Order {
 	public Order(String status, Client client) {
 
 		initMoment();
-
 		setStatus(status);
-
 		this.client = client;
 
-	}
-
-	public void addItem(OrderItem item) {
-		items.add(item);
-	}
-
-	public Client getClient() {
-		return client;
-	}
-
-	public List<OrderItem> getItems() {
-		return items;
 	}
 
 	public Date getMoment() {
@@ -40,25 +26,21 @@ public class Order {
 	public String getStatus() {
 		return status.toString();
 	}
-
-	private void initMoment() {
-		this.moment = new Date();
+	
+	public void setStatus(String status) {
+		this.status = OrderStatus.valueOf(status);
 	}
-
-	public void removeItem(OrderItem item) {
-		items.remove(item);
+	
+	public Client getClient() {
+		return client;
 	}
 
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
-	public void setItems(List<OrderItem> items) {
-		this.items = items;
-	}
-
-	public void setStatus(String status) {
-		this.status = OrderStatus.valueOf(status);
+	
+	public List<OrderItem> getItems() {
+		return items;
 	}
 
 	public Double total() {
@@ -71,6 +53,18 @@ public class Order {
 
 		return total;
 
+	}
+
+	public void addItem(OrderItem item) {
+		items.add(item);
+	}
+	
+	public void removeItem(OrderItem item) {
+		items.remove(item);
+	}
+
+	private void initMoment() {
+		this.moment = new Date();
 	}
 
 }
