@@ -66,5 +66,30 @@ public class Order {
 	private void initMoment() {
 		this.moment = new Date();
 	}
+	
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("ORDER SUMMARY: ");
+		sb.append("\nOrder moment: ");
+		sb.append(moment);
+		sb.append("\nOrder status: ");
+		sb.append(status);
+		sb.append("\n");
+		sb.append(client.toString());
+		sb.append("\nOrder items: \n");
+		
+		for (OrderItem item : items) {
+			sb.append(item.toString());
+			sb.append("\n");
+		}
+		
+		sb.append("Total price: $");
+		sb.append(total());
+		
+		return sb.toString();
+		
+	}
 
 }

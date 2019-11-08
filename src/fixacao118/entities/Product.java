@@ -25,5 +25,16 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(name);
+		sb.append(", $");
+		sb.append(price);
+		
+		return sb.toString(); 
+	}
 
 }
