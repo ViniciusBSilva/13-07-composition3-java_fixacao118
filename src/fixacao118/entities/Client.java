@@ -10,10 +10,10 @@ public class Client {
 	private String email;
 	private Date birthDate;
 	
-	public Client(String name, String email, Date birthDate) {
+	public Client(String name, String email, String birthDate) throws ParseException {
 		this.name = name;
 		this.email = email;
-		this.birthDate = birthDate;
+		setBirthDate(birthDate);
 	}
 
 	public String getName() {
