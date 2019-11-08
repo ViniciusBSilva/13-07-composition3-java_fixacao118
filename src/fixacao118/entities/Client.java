@@ -50,7 +50,7 @@ public class Client {
 		sb.append("Client: ");
 		sb.append(name);
 		sb.append(" (");
-		sb.append(birthDate);
+		sb.append(birthDate);	//TODO correct date format
 		sb.append(") - ");
 		sb.append(email);
 		

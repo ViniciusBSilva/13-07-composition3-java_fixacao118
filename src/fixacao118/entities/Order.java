@@ -73,7 +73,7 @@ public class Order {
 		
 		sb.append("ORDER SUMMARY: ");
 		sb.append("\nOrder moment: ");
-		sb.append(moment);
+		sb.append(moment);					//TODO correct date format
 		sb.append("\nOrder status: ");
 		sb.append(status);
 		sb.append("\n");
@@ -86,7 +86,7 @@ public class Order {
 		}
 		
 		sb.append("Total price: $");
-		sb.append(total());
+		sb.append(total());					//TODO correct number format
 		
 		return sb.toString();
 		

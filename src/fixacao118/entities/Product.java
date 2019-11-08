@@ -32,7 +32,7 @@ public class Product {
 		
 		sb.append(name);
 		sb.append(", $");
-		sb.append(price);
+		sb.append(price);		//TODO correct number format
 		
 		return sb.toString(); 
 	}

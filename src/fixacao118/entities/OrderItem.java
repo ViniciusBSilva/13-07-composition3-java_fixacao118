@@ -48,7 +48,7 @@ public class OrderItem {
 		sb.append(", Quantity: ");
 		sb.append(quantity);
 		sb.append(", Subtotal: $");
-		sb.append(subTotal());
+		sb.append(subTotal());				//TODO correct number format
 		
 		return sb.toString();
 		

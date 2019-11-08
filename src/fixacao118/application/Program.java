@@ -1,6 +1,7 @@
 package fixacao118.application;
 
 import java.text.ParseException;
+import java.util.Locale;
 import java.util.Scanner;
 
 import fixacao118.entities.Client;
@@ -12,20 +13,27 @@ public class Program {
 
 	public static void main(String[] args) throws ParseException {
 
+		Locale.setDefault(Locale.US);
+		
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter client data:");
 		System.out.print("Name: ");
 		String clientName = sc.next();
+		sc.nextLine();
 		System.out.print("Email: ");
 		String email = sc.next();
+		sc.nextLine();		
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		String birthDate = sc.next();
+		sc.nextLine();
 		
+		System.out.println();
 		System.out.println("Enter order data: ");
 		System.out.print("Status: ");
 		String status = sc.next();
-		System.out.println("How many items to this order? ");
+		sc.nextLine();
+		System.out.print("How many items to this order? ");
 		Integer numberOfItems = sc.nextInt();
 		
 		//sc.nextLine();
@@ -36,9 +44,10 @@ public class Program {
 		
 		for (int i = 0; i < numberOfItems; i++) {
 		
-			System.out.printf("Enter %d item data: ", i);
-			System.out.println("Product name: ");
+			System.out.printf("Enter #%d item data: \n", i+1);
+			System.out.print("Product name: ");
 			String productName = sc.next();
+			sc.nextLine();
 			System.out.println("Product price: ");
 			Double price = sc.nextDouble();
 			System.out.println("Quantity: ");
